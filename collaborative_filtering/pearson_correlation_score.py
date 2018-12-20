@@ -1,4 +1,4 @@
-from recommendations import critics
+# from recommendations import critics
 from math import sqrt
 
 # Returns the Pearson correlation coefficient for p1 and p2
@@ -29,6 +29,7 @@ def sim_pearson(prefs, p1, p2):
                         for mut_rated in si])
 
     # Calculate Pearson score
+    # Pretty discrete, but it works.
     numerator = product_sum - (sum1 * sum2 / n)
     denominator = sqrt((square_sum1 - pow(sum1, 2) / n) * (square_sum2 - pow(sum2, 2) / n))
     if denominator == 0:
@@ -38,4 +39,4 @@ def sim_pearson(prefs, p1, p2):
 
     return r
 
-print(sim_pearson(critics, 'Lisa Rose', 'Gene Seymour'))
+# print(sim_pearson(critics, 'Lisa Rose', 'Gene Seymour'))

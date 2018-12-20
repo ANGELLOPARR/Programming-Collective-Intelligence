@@ -1,4 +1,4 @@
-from recommendations import critics
+# from recommendations import critics
 from math import sqrt
 
 # Returns a distance-based similarity score for person1 and person2
@@ -25,4 +25,4 @@ def sim_distance(prefs, person1, person2):
 
     return 1 / (1 + sqrt(sum_of_squares))
 
-print(sim_distance(critics, 'Lisa Rose', 'Gene Seymour'))
+# print(sim_distance(critics, 'Lisa Rose', 'Gene Seymour'))
