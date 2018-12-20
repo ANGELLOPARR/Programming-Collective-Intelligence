@@ -16,6 +16,10 @@ def sim_distance(prefs, person1, person2):
         return 0
 
     # Add up the squares of all the differences
+    # where each axis is a movie title, and we are squaring
+    # the difference between points of a similar axis (movie).
+    # This is a huge distance formula with a lot more variables
+    # than just x and y.
     sum_of_squares = sum([pow(prefs[person1][item] - prefs[person2][item], 2)
                           for item in si])
 
